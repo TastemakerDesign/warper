@@ -1,0 +1,105 @@
+PODS:
+  - audio_service (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - audio_session (0.0.1):
+    - FlutterMacOS
+  - device_info_plus (0.0.1):
+    - FlutterMacOS
+  - flutter_media_metadata (0.0.1):
+    - FlutterMacOS
+    - ID3TagEditor
+  - FlutterMacOS (1.0.0)
+  - ID3TagEditor (5.2.0)
+  - irondash_engine_context (0.0.1):
+    - FlutterMacOS
+  - just_audio (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - path_provider_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - screen_retriever_macos (0.0.1):
+    - FlutterMacOS
+  - sqflite_darwin (0.0.4):
+    - Flutter
+    - FlutterMacOS
+  - super_native_extensions (0.0.1):
+    - FlutterMacOS
+  - volume_extractor (0.0.1):
+    - FlutterMacOS
+  - window_manager (0.2.0):
+    - FlutterMacOS
+  - window_size (0.0.2):
+    - FlutterMacOS
+
+DEPENDENCIES:
+  - audio_service (from `Flutter/ephemeral/.symlinks/plugins/audio_service/darwin`)
+  - audio_session (from `Flutter/ephemeral/.symlinks/plugins/audio_session/macos`)
+  - device_info_plus (from `Flutter/ephemeral/.symlinks/plugins/device_info_plus/macos`)
+  - flutter_media_metadata (from `Flutter/ephemeral/.symlinks/plugins/flutter_media_metadata/macos`)
+  - FlutterMacOS (from `Flutter/ephemeral`)
+  - irondash_engine_context (from `Flutter/ephemeral/.symlinks/plugins/irondash_engine_context/macos`)
+  - just_audio (from `Flutter/ephemeral/.symlinks/plugins/just_audio/darwin`)
+  - path_provider_foundation (from `Flutter/ephemeral/.symlinks/plugins/path_provider_foundation/darwin`)
+  - screen_retriever_macos (from `Flutter/ephemeral/.symlinks/plugins/screen_retriever_macos/macos`)
+  - sqflite_darwin (from `Flutter/ephemeral/.symlinks/plugins/sqflite_darwin/darwin`)
+  - super_native_extensions (from `Flutter/ephemeral/.symlinks/plugins/super_native_extensions/macos`)
+  - volume_extractor (from `Flutter/ephemeral/.symlinks/plugins/volume_extractor/macos`)
+  - window_manager (from `Flutter/ephemeral/.symlinks/plugins/window_manager/macos`)
+  - window_size (from `Flutter/ephemeral/.symlinks/plugins/window_size/macos`)
+
+SPEC REPOS:
+  trunk:
+    - ID3TagEditor
+
+EXTERNAL SOURCES:
+  audio_service:
+    :path: Flutter/ephemeral/.symlinks/plugins/audio_service/darwin
+  audio_session:
+    :path: Flutter/ephemeral/.symlinks/plugins/audio_session/macos
+  device_info_plus:
+    :path: Flutter/ephemeral/.symlinks/plugins/device_info_plus/macos
+  flutter_media_metadata:
+    :path: Flutter/ephemeral/.symlinks/plugins/flutter_media_metadata/macos
+  FlutterMacOS:
+    :path: Flutter/ephemeral
+  irondash_engine_context:
+    :path: Flutter/ephemeral/.symlinks/plugins/irondash_engine_context/macos
+  just_audio:
+    :path: Flutter/ephemeral/.symlinks/plugins/just_audio/darwin
+  path_provider_foundation:
+    :path: Flutter/ephemeral/.symlinks/plugins/path_provider_foundation/darwin
+  screen_retriever_macos:
+    :path: Flutter/ephemeral/.symlinks/plugins/screen_retriever_macos/macos
+  sqflite_darwin:
+    :path: Flutter/ephemeral/.symlinks/plugins/sqflite_darwin/darwin
+  super_native_extensions:
+    :path: Flutter/ephemeral/.symlinks/plugins/super_native_extensions/macos
+  volume_extractor:
+    :path: Flutter/ephemeral/.symlinks/plugins/volume_extractor/macos
+  window_manager:
+    :path: Flutter/ephemeral/.symlinks/plugins/window_manager/macos
+  window_size:
+    :path: Flutter/ephemeral/.symlinks/plugins/window_size/macos
+
+SPEC CHECKSUMS:
+  audio_service: cab6c1a0eaf01b5a35b567e11fa67d3cc1956910
+  audio_session: 728ae3823d914f809c485d390274861a24b0904e
+  device_info_plus: ce1b7762849d3ec103d0e0517299f2db7ad60720
+  flutter_media_metadata: b17ec1e742acf5491f22bf04f879fcfd546b2960
+  FlutterMacOS: 8f6f14fa908a6fb3fba0cd85dbd81ec4b251fb24
+  ID3TagEditor: 767267d21a7fae766520ef44babaa06da6ee0e04
+  irondash_engine_context: da62996ee25616d2f01bbeb85dc115d813359478
+  just_audio: a42c63806f16995daf5b219ae1d679deb76e6a79
+  path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
+  screen_retriever_macos: 776e0fa5d42c6163d2bf772d22478df4b302b161
+  sqflite_darwin: 5a7236e3b501866c1c9befc6771dfd73ffb8702d
+  super_native_extensions: 85efee3a7495b46b04befcfc86ed12069264ebf3
+  volume_extractor: 4d1dced603a0f59f1baef34d786c46a6dd9fdef8
+  window_manager: 3a1844359a6295ab1e47659b1a777e36773cd6e8
+  window_size: 339dafa0b27a95a62a843042038fa6c3c48de195
+
+PODFILE CHECKSUM: aa7d3454e263e19b066b1862812e800dde5c2e01
+
+COCOAPODS: 1.16.2

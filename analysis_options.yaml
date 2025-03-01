@@ -1,0 +1,51 @@
+include: package:flutter_lints/flutter.yaml
+
+# https://dart.dev/guides/language/analysis-options
+analyzer:
+  language:
+    strict-inference: false
+    strict-raw-types: true
+    strict-casts: true
+  exclude:
+    - build/**
+    - plugins/**
+
+# https://dart.dev/tools/linter-rules
+linter:
+  rules:
+    # Disable dumb rules.
+    file_names: false
+    prefer_const_constructors: false
+    use_key_in_widget_constructors: false
+    avoid_print: false
+    prefer_const_literals_to_create_immutables: false
+    prefer_conditional_assignment: false
+    unnecessary_brace_in_string_interps: false
+    prefer_interpolation_to_compose_strings: false
+    prefer_is_empty: false
+    camel_case_types: false
+    no_leading_underscores_for_local_identifiers: false
+    prefer_single_quotes: false
+    prefer_const_constructors_in_immutables: false
+    use_build_context_synchronously: false
+    prefer_const_declarations: false
+    # Enable smart rules.
+    always_declare_return_types: true
+    annotate_overrides: true
+    unnecessary_string_interpolations: true
+    sized_box_for_whitespace: true
+    avoid_unnecessary_containers: true
+    avoid_void_async: true
+    prefer_double_quotes: true
+    only_throw_errors: true
+    unawaited_futures: true
+    cast_nullable_to_non_nullable: true
+    no_default_cases: true
+    null_check_on_nullable_type_parameter: true
+    unnecessary_nullable_for_final_variable_declarations: true
+    use_late_for_private_fields_and_variables: true
+    sort_child_properties_last: true
+    await_only_futures: true
+    require_trailing_commas: true
+    always_use_package_imports: true
+    discarded_futures: true

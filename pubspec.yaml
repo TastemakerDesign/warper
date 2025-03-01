@@ -1,0 +1,49 @@
+name: warper
+description: "Keyboard-friendly replacement for the Apple Music app on desktop."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_media_metadata:
+    path: ./plugins/flutter_media_metadata
+  volume_extractor:
+    path: ./plugins/volume_extractor
+  cupertino_icons: ^1.0.6
+  file_picker: ^7.1.0
+  flutter_zustand: ^0.0.5
+  path: ^1.9.0
+  window_manager: ^0.4.3
+  audio_service: ^0.18.16
+  just_audio: ^0.9.42
+  rxdart: ^0.28.0
+  google_fonts: ^6.2.1
+  collection: ^1.18.0
+  flutter_animate: ^4.5.2
+  flutter_hooks: ^0.20.5
+  scrollable_positioned_list: ^0.3.8
+  super_context_menu: ^0.8.19
+  window_size: ^0.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.11.0
+
+flutter:
+  uses-material-design: true
+
+assets:
+  - assets/google_fonts
+
+# dart run flutter_launcher_icons
+flutter_icons:
+  macos:
+    generate: true
+    image_path: "assets/app_icon.png"
