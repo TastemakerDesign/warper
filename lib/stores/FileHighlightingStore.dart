@@ -103,7 +103,8 @@ class FileHighlightingStore
     switch (option) {
       case HighlightingOption.next:
         newIndex = (currentIndex + 1) % songList.length;
-        await _scrollIntoView(newIndex, false);
+        // Jump unconditionally if wrapping around.
+        await _scrollIntoView(newIndex, (newIndex - currentIndex).abs() > 1);
       case HighlightingOption.pageDown:
         newIndex = min(songList.length - 1, currentIndex + 13);
         await _scrollIntoView(newIndex, true);
@@ -112,7 +113,8 @@ class FileHighlightingStore
         await _scrollIntoView(newIndex, true);
       case HighlightingOption.previous:
         newIndex = (currentIndex - 1) % songList.length;
-        await _scrollIntoView(newIndex, false);
+        // Jump unconditionally if wrapping around.
+        await _scrollIntoView(newIndex, (newIndex - currentIndex).abs() > 1);
       case HighlightingOption.pageUp:
         newIndex = max(0, currentIndex - 13);
         await _scrollIntoView(newIndex, true);
@@ -156,11 +158,9 @@ class FileHighlightingStore
   }
 
   Future<void> _scrollIntoView(int index, bool jumpUnconditionally) async {
-    final topSegmentHeight = 76.0 + 64.0;
     final tileHeight = 60.0;
     final scrollOffset = scrollController.offset;
-    final screenHeight =
-        scrollController.position.viewportDimension - topSegmentHeight;
+    final screenHeight = scrollController.position.viewportDimension;
     final heightDifference = scrollOffset - tileHeight * index;
     final conditional1 = (heightDifference > 0) &&
         (heightDifference.abs() > (screenHeight + 0.5 * tileHeight));
