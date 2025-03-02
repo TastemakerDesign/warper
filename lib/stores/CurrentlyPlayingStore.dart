@@ -2,8 +2,10 @@
 import "dart:async";
 import "dart:io";
 
+import "package:flutter/material.dart";
 import "package:flutter_zustand/flutter_zustand.dart";
 import "package:just_audio/just_audio.dart";
+import "package:toastification/toastification.dart";
 import "package:warper/functions/handleDoubleClickFolderAction.dart";
 import "package:warper/stores/FileHighlightingStore.dart";
 import "package:warper/stores/SongListStore.dart";
@@ -53,7 +55,16 @@ class CurrentlyPlayingStore extends Store<
 
   Future<void> playSong(FileSystemEntity fileSystemEntity) async {
     String filePath = fileSystemEntity.path;
-    await _player.setFilePath(filePath);
+    try {
+      await _player.setFilePath(filePath);
+    } on PlayerException {
+      toastification.show(
+        type: ToastificationType.error,
+        autoCloseDuration: Duration(seconds: 5),
+        title: Text("Insufficient permissions for file"),
+      );
+      return;
+    }
     unawaited(
       VolumeExtractor.extractVolumeData(filePath).then((waveformSamples) {
         set(

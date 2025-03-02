@@ -29,6 +29,7 @@ dependencies:
   scrollable_positioned_list: ^0.3.8
   super_context_menu: ^0.8.19
   window_size: ^0.1.0
+  toastification: ^2.3.0
 
 dev_dependencies:
   flutter_test:

@@ -5,6 +5,7 @@ import "package:flutter/gestures.dart";
 import "package:flutter/material.dart";
 import "package:flutter/services.dart";
 import "package:flutter_hooks/flutter_hooks.dart";
+import "package:toastification/toastification.dart";
 import "package:warper/CustomTheme.dart";
 import "package:warper/HomePage.dart";
 import "package:warper/functions/navigateUpwardsAction.dart";
@@ -72,22 +73,27 @@ class MyApp extends HookWidget with WindowListener {
       [],
     );
 
-    return MaterialApp(
-      theme: ThemeData(
-        textTheme: CustomTheme.interFont,
+    return ToastificationWrapper(
+      config: ToastificationConfig(
+        alignment: Alignment.topCenter,
       ),
-      title: "Warper",
-      home: Listener(
-        onPointerDown: onPointerDown,
-        behavior: HitTestBehavior.opaque,
-        child: Focus(
-          focusNode: FocusNode()..requestFocus(),
-          autofocus: true,
-          onKeyEvent: (FocusNode node, KeyEvent event) {
-            unawaited(handleKeyPress(event));
-            return KeyEventResult.handled;
-          },
-          child: HomePage(),
+      child: MaterialApp(
+        theme: ThemeData(
+          textTheme: CustomTheme.interFont,
+        ),
+        title: "Warper",
+        home: Listener(
+          onPointerDown: onPointerDown,
+          behavior: HitTestBehavior.opaque,
+          child: Focus(
+            focusNode: FocusNode()..requestFocus(),
+            autofocus: true,
+            onKeyEvent: (FocusNode node, KeyEvent event) {
+              unawaited(handleKeyPress(event));
+              return KeyEventResult.handled;
+            },
+            child: HomePage(),
+          ),
         ),
       ),
     );
