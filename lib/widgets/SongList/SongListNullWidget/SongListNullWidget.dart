@@ -1,29 +1,24 @@
 import "package:flutter/material.dart";
 import "package:flutter_zustand/flutter_zustand.dart";
 import "package:warper/CustomTheme.dart";
-import "package:warper/functions/canNavigateUpwards.dart";
-import "package:warper/functions/navigateUpwardsAction.dart";
 import "package:warper/stores/CurrentFolderStore.dart";
 
-class SongListEmptyWidget extends StatelessWidget {
+class SongListNullWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final currentFolderStore = useCurentFolderStore();
-    final (isPicking, currentFolderPath) = currentFolderStore.select(
+    final isPicking = currentFolderStore.select(
       context,
-      (state) => (state.isPicking, state.currentFolderPath),
+      (state) => state.isPicking,
     );
 
     return Material(
       color: CustomTheme.transparent,
       child: Center(
         child: InkWell(
-          onTap: (currentFolderPath != null &&
-                  canNavigateUpwards(currentFolderPath))
-              ? () async => await navigateUpwardsAction()
-              : isPicking
-                  ? null
-                  : () async => await currentFolderStore.pickFolder(),
+          onTap: isPicking
+              ? null
+              : () async => await currentFolderStore.pickFolder(),
           hoverColor: CustomTheme.gray7.withOpacity(0.1),
           highlightColor: CustomTheme.gray7.withOpacity(0.2),
           splashColor: CustomTheme.gray7.withOpacity(0.2),
@@ -36,16 +31,13 @@ class SongListEmptyWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Icon(
-                  (currentFolderPath != null &&
-                          canNavigateUpwards(currentFolderPath))
-                      ? Icons.arrow_back
-                      : Icons.folder,
+                  Icons.folder,
                   size: 96.0,
                   color: CustomTheme.gray8,
                 ),
                 SizedBox(height: 12.0),
                 Text(
-                  "No Songs Found",
+                  "Select Music Folder",
                   style: TextStyle(
                     color: CustomTheme.gray8,
                     fontSize: 16.0,

@@ -10,6 +10,7 @@ import "package:warper/widgets/FileTile/FileTile.dart";
 import "package:warper/widgets/FolderTile/FolderTile.dart";
 import "package:warper/widgets/SongList/SongListEmptyWidget/SongListEmptyWidget.dart";
 import "package:warper/widgets/SongList/SongListMenu/SongListMenu.dart";
+import "package:warper/widgets/SongList/SongListNullWidget/SongListNullWidget.dart";
 
 class SongList extends StatelessWidget {
   @override
@@ -20,7 +21,10 @@ class SongList extends StatelessWidget {
       (state) => (state.songList, state.songMetadata),
     );
 
-    if (songList == null || songList.isEmpty) {
+    if (songList == null) {
+      return SongListNullWidget();
+    }
+    if (songList.isEmpty) {
       return SongListEmptyWidget();
     }
     return ListView.builder(
