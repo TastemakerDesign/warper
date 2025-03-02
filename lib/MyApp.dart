@@ -80,10 +80,13 @@ class MyApp extends HookWidget with WindowListener {
       home: Listener(
         onPointerDown: onPointerDown,
         behavior: HitTestBehavior.opaque,
-        child: KeyboardListener(
+        child: Focus(
           focusNode: FocusNode()..requestFocus(),
-          onKeyEvent: (KeyEvent event) async => await handleKeyPress(event),
           autofocus: true,
+          onKeyEvent: (FocusNode node, KeyEvent event) {
+            unawaited(handleKeyPress(event));
+            return KeyEventResult.handled;
+          },
           child: HomePage(),
         ),
       ),
