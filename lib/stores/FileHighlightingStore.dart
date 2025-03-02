@@ -42,7 +42,10 @@ class FileHighlightingStore
       );
       try {
         if (shouldScrollToTop) {
-          scrollController.jumpTo(0);
+          // Avoid triggering an exception when the folder is empty.
+          if (scrollController.positions.length != 0) {
+            scrollController.jumpTo(0);
+          }
           return;
         }
         final songListStore = useSongListStore();
