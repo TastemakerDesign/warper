@@ -1,4 +1,3 @@
-// ignore_for_file: no_widget_files_with_more_than_150_lines_of_code
 import "dart:math";
 
 import "package:flutter/material.dart";

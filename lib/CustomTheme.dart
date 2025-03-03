@@ -1,5 +1,3 @@
-// ignore_for_file: no_hard_coded_colors
-// ignore_for_file: no_hard_coded_fonts
 import "package:flutter/material.dart";
 import "package:google_fonts/google_fonts.dart";
 

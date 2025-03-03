@@ -1,4 +1,3 @@
-// ignore_for_file: no_widgets_without_same_name_parent_folder
 import "package:flutter/material.dart";
 import "package:flutter_animate/flutter_animate.dart";
 import "package:flutter_zustand/flutter_zustand.dart";

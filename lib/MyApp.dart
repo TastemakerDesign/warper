@@ -1,4 +1,3 @@
-// ignore_for_file: no_widgets_without_same_name_parent_folder
 import "dart:async";
 
 import "package:flutter/gestures.dart";
