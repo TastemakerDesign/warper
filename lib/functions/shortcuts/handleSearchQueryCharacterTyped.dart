@@ -48,6 +48,7 @@ void handleSearchQueryCharacterTyped(KeyEvent event, bool isFirstCharacter) {
     "End",
     "Numpad Enter",
     "Num Lock",
+    "Insert",
   ];
   if (blackList.contains(keyLabel)) {
     return;
