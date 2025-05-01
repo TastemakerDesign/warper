@@ -8,8 +8,6 @@ import "package:window_manager/window_manager.dart";
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await windowManager.ensureInitialized();
-  await windowManager.waitUntilReadyToShow();
-  await windowManager.maximize();
   await AudioService.init(
     builder: () => MyAudioHandler(),
     config: AudioServiceConfig(),

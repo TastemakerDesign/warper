@@ -11,6 +11,17 @@ class AppDelegate: FlutterAppDelegate {
         return false
     }
 
+    override func applicationDidFinishLaunching(_ aNotification: Notification) {
+        // Get the main window and maximize it
+        if let window = NSApp.windows.first {
+            if let screen = window.screen ?? NSScreen.main {
+                let frame = screen.visibleFrame
+                window.setFrame(frame, display: true)
+                window.setContentSize(frame.size)
+            }
+        }
+    }
+
     override func applicationShouldHandleReopen(
         _ sender: NSApplication, hasVisibleWindows flag: Bool
     ) -> Bool {
