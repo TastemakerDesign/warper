@@ -20,8 +20,6 @@ If you find a bug with Warper or want to request a feature, create a GitHub issu
 
 # Links
 
-- Download Link - https://github.com/TastemakerDesign/Warper/releases
-
 - Demo Video - https://www.youtube.com/watch?v=li85BsDyPk0
 
 - Tastemaker Design - https://tastemaker.design/
